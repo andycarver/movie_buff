@@ -11,6 +11,18 @@
         <p>Actor Name: <input type="text" name="actor_name"></p>
         <input type="submit" value="Add Actor">
     </form>
+    <form action="/add_movie">
+        <p>Movie Name: <input type="text" name="movie_name"></p>
+        <input type="submit" value="Add Movie">
+    </form>
+    <h1>All Actors</h1>
+      {% for actor in actors %}
+        <h5>{{ actor_name }}</h5>
+      {% endfor %}
+    <h1>All Movies</h1>
+      {% for movie in movies %}
+        <h5>{{ movie_name }}</h5>
+      {% endfor %}
     <a href="#">View All Actors</a>
     <a href="#">View All Movies</a>
 </body>

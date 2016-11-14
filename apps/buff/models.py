@@ -3,13 +3,13 @@ from django.db import models
 
 class ActorManager(models.Manager):
     def add_actor():
-        pass
+        actor = self.create(actor_name=request.POST['actor_name'])
     def update_actor():
         pass
 
 class MovieManager(models.Manager):
     def add_movie():
-        pass
+        movie = self.create(movie_name=request.POST['movie_name'])
 
 class Movie(models.Model):
     movie_name = models.CharField(max_length = 50)
