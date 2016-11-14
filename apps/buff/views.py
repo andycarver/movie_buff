@@ -13,4 +13,7 @@ def add_actor(request):
     return render(request, 'buff/index.html', context)
 
 def add_movie(request):
-    return render(request, 'buff/index.html')
+    context = {
+        'movies':Movie.objects.all()[::-1]
+    }
+    return render(request, 'buff/index.html', context)
